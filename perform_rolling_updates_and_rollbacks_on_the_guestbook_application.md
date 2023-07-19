@@ -87,5 +87,23 @@ spec:
 5. Open a new terminal and run the port-forward command again to start the app:<br>
 ```kubectl port-forward deployment.apps/guestbook 3000:3000```
 
+6. Launch your application on port 3000. Click on the Skills Network button on the right, it will open the “Skills Network Toolbox”. Then click the Other then Launch Application. From there you should be able to enter the port and launch.
+Img of application here...
 
+8. Run the below command to see the history of deployment rollouts:
+```kubectl rollout history deployment/guestbook```
+
+9. kubectl rollout history deployments guestbook --revision=2
+rev.png here
+
+11. Run the below command to get the replica sets and observe the deployment which is being used now:
+```kubectl get rs```
+
+12. Run the below command to undo the deploymnent and set it to Revision 1:
+```kubectl rollout undo deployment/guestbook --to-revision=1```
+
+13. Run the below command to get the replica sets after the Rollout has been undone. The deployment being used would have changed as below:
+```kubectl get rs```
+
+rs.png here
 
