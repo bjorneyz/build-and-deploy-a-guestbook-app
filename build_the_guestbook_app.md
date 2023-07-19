@@ -51,7 +51,9 @@ EXPOSE 3000
 6. Verify that the image was pushed successfully.<br>
 ```ibmcloud cr images```
 
-7. Open the deployment.yml file in the v1/guestbook directory & view the code for the deployment of the application:<br>
+Add photo crimages.
+
+8. Open the deployment.yml file in the v1/guestbook directory & view the code for the deployment of the application:<br>
 ```
 apiVersion: apps/v1
 kind: Deployment
